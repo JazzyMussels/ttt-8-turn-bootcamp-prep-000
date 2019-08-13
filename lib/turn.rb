@@ -14,5 +14,8 @@ def move(board, index, character='X')
   board[index] = character
 end
 
-
+  return nil if index > 8
+  return true if !position_taken?(board, index) 
+  false 
+end
 
