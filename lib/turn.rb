@@ -15,7 +15,7 @@ def move(board, index, character='X')
 end
 
 def valid_move?(board, index) 
-  return nil if index > 8
+  return nil if !index.between?(0,8)
   return true if !position_taken?(board, index) 
   false 
 end
